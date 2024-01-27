@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    .bodyc {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+    #calc {
+      width: 215px;
+      border-radius: 3px;
+      /* height: 300px; */
+      background-color: #cbcbcb;
+      padding: 10px;
+    }
+    #display {
+      width: 188px;
+      padding: 20px 4.8px;
+      margin-left: 5px;
+      text-align: right;
+      padding-right: 10px;
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      padding: 5px;
+    }
+    a {
+      text-decoration: none;
+    }
+    #link{
+      text-align: center;
+      margin-top: -4rem;
+    }
+  </style>
+  <body>
+    <div class="bodyc">
+      <div id="calc">
+        <div id="inp">
+          <input type="text" id="display" disabled />
+        </div>
+        <div>
+          <button onclick="hesabla('1')">1</button>
+          <button onclick="hesabla('2')">2</button>
+          <button onclick="hesabla('3')">3</button>
+          <button onclick="hesabla('+')">+</button>
+        </div>
+        <div>
+          <button onclick="hesabla('4')">4</button>
+          <button onclick="hesabla('5')">5</button>
+          <button onclick="hesabla('6')">6</button>
+          <button onclick="hesabla('-')">-</button>
+        </div>
+        <div>
+          <button onclick="hesabla('7')">7</button>
+          <button onclick="hesabla('8')">8</button>
+          <button onclick="hesabla('9')">9</button>
+          <button onclick="hesabla('*')">*</button>
+        </div>
+        <div>
+          <button onclick="cleap()">C</button>
+          <button onclick="hesabla('0')">0</button>
+          <button
+            id="calculate"
+            onclick="hesafla()"
+            style="background-color: rgb(251, 189, 72)"
+          >
+            =
+          </button>
+          <button onclick="hesabla('/')">/</button>
+        </div>
+      </div>
+    </div>
+
+<div id="link">
+  <a href="../main.html">Main Page  </a>
+
+</div>
+
+    <script>
+      let display = document.getElementById("display");
+      function hesabla(x) {
+        display.value += x;
+      }
+      function hesafla() {
+        display.value = eval(display.value);
+      }
+      function cleap() {
+        display.value = "";
+      }
+    </script>
+  </body>
+</html>

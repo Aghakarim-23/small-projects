@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+<input type="text" id="a" placeholder="rəqəm daxil et">
+<input type="text" id="b" placeholder="rəqəm daxil et">
+<button onclick="hesabla()">OK</button>
+<span id="message"></span>
+<p><a href="../main.html">Main Page  </a>
+</p>
+
+
+
+
+    <script>
+let a = document.getElementById('a')
+let b = document.getElementById('b')
+let message = document.getElementById('message')
+function hesabla (){
+let aa = a.value;
+let bb = b.value;
+
+if(aa > bb){
+    message.innerHTML = `${aa}-${bb}-den boyukdur`
+} else{
+    message.innerHTML = `${bb}-${aa}-den boyukdur`
+
+}
+
+
+}
+
+
+    </script>
+</body>
+</html>

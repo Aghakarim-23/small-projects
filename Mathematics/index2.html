@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riyaziyyat</title>
+    <style>
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Boş olan xanalara istənilən rəqəmi daxil edin və <strong>OK</strong> düyməsini sıxın.</p>
+    <p><strong>OK</strong> düyməsini sıxdıqdan sonra ekrana ədədlərin cəmi, ortası və hasili çıxacaqdır.</p>
+    <input type="text" id="a" placeholder="rəqəm" />
+    <input type="text" id="b" placeholder="rəqəm"/>
+    <input type="text" id="c" placeholder="rəqəm"/>
+    <button onclick="hesabla()">ok</button>
+    <p id="netice"></p>
+    <h1 id="out"></h1>
+    <a href="../main.html">Main Page</a>
+
+    <script>
+      let a = document.getElementById("a");
+      let b = document.getElementById("b");
+      let c = document.getElementById("c");
+      let netice = document.getElementById("netice");
+
+      function hesabla() {
+        let cem = +a.value + +b.value + +c.value;
+        let orta = cem / 3;
+        let vurma = +a.value * +b.value * +c.value;
+
+        netice.innerHTML =
+          "ƏDƏDLƏRİN CƏMİ: " +
+          cem + 
+          "<br> <br>ORTA: " +
+          orta +
+          "<br> <br>HASIL: " +
+          vurma;
+      }
+    </script>
+  </body>
+</html>

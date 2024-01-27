@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <p>Boş inputun içərisinə istədiyiniz rəqəmi daxil etdikdən sonra <b>OK</b> düyməsini sıxın. Ekranda sizin <b><em>input'un</em></b> ̰ içərisinə daxil etdiyiniz rəqəm çıxacaqdır.</p>
+    <input type="text" id="inp" placeholder="rəqəm daxil et" />
+    <button id="btn" onclick="ekranaVur()">OK</button>
+    <h1 id="gorsed"></h1>
+    <a href="../main.html">Main Page  </a>
+
+    <script>
+      let inp = document.getElementById("inp");
+      let btn = document.getElementById("btn");
+      let gorsed = document.getElementById("gorsed");
+
+      function ekranaVur() {
+        console.log("s");
+
+        gorsed.innerHTML = inp.value;
+        inp.value = " ";
+      }
+    </script>
+  </body>
+</html>

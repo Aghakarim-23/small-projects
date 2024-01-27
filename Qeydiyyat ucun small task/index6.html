@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qeydiyyat sehifesi</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Siz qeydiyyatdan keçmək üçün <b>18</b>yaşdan yuxarı olmalısınız. Əks halda      qeydiyyatdan keçə bilməyəcəksiniz.
+    </p>
+
+    <h3 id="screen"></h3>
+    <a href="../main.html">Main Page </a>
+
+    <script>
+      let myAnswer = prompt(
+        "Cinemaya daxil olmaq üçün doğum ilinizi yazin.                                  Tələb olunan yaş kriteriyası 18+"
+      );
+      let cari = new Date().getFullYear();
+      let age = cari - myAnswer;
+      let screen = document.getElementById("screen");
+
+      if (age >= 18) {
+        screen.innerHTML =
+          "Siz ugurla qeydiyyatdan kecdiniz." +
+          " Sizin yasiniz: " +
+          (cari - myAnswer) +
+          ".";
+      } else {
+        alert("Yaşınız çatmır");
+      }
+    </script>
+  </body>
+</html>

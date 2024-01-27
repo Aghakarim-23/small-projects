@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age calculator</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  <input type="text" id="a" />
+    <input type="text" id="b" />
+    <input type="text" id="c" />
+    <button onclick="hesabla()">ok</button>
+    <p id="netice"></p> -->
+    <h1 id="out"></h1>
+
+    <a href="../main.html">Main Page</a>
+    <script>
+      /* let a = document.getElementById("a");
+      let b = document.getElementById("b");
+      let c = document.getElementById("c");
+      let netice = document.getElementById("netice");
+
+      function hesabla() {
+        let cem = +a.value + +b.value + +c.value;
+        let orta = cem / 3;
+        let vurma = +a.value * +b.value * +c.value;
+
+        netice.innerHTML =
+          "ƏDƏDLƏRİN CƏMİ: " +
+          cem +
+          "<br>ORTA: " +
+          orta +
+          "<br>HASIL: " +
+          vurma;
+      } */
+      let age = prompt("Enter your birth year");
+
+      let answer = age;
+
+      let cari = new Date();
+      let hazir = cari.getFullYear();
+      let out = document.getElementById("out");
+      let cavab = (hazir - answer);
+      cavab > 0  ? out.innerHTML = `Your age is: ${cavab}` : out.innerHTML = `Siz hələ doğulmamısınız 😂`;
+     
+    </script>
+  </body>
+</html>

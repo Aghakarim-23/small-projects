@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University calculator</title>
+    <style>
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="m" placeholder="Semestr balin"/>
+    <input type="text" id="f" placeholder="Imtahan balin" />
+    <button onclick="hesabla()">Hesabla</button>
+    <p id="mesaj"></p>
+    <a href="../main.html">Main Page  </a>
+
+
+    <script>
+      let m = document.getElementById("m");
+      let f = document.getElementById("f");
+      let mesaj = document.getElementById("mesaj");
+
+      function hesabla() {
+        let herf = "";
+        let qiymet = +m.value + +f.value;
+
+        if (+f.value < 17 || qiymet <= 50) herf = "F";
+        else if (qiymet < 60) herf = "E";
+        else if (qiymet < 70) herf = "D";
+        else if (qiymet < 80) herf = "C";
+        else if (qiymet < 90) herf = "B";
+        else herf = "A";
+
+        mesaj.innerHTML =
+          herf == "F" ? `Kesildin qiymetin:  ${qiymet}(${herf}) ` : `Kecdin qiymetin: ${herf}(${qiymet});`;
+      }
+    </script>
+  </body>
+</html>
